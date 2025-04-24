@@ -573,3 +573,19 @@ display: flex;
 align-items: center;
 
 }
+
+.notice{
+height: auto;
+background-color: #ff0033;
+width: 100vw;
+display: flex;
+justify-content: center;
+}
+
+
+.noticeText{
+color: white;
+font-family: arial;
+font-weight: bolder;
+font-size: 1.5rem;
+}
