@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Aleks's portfolio</title>
+    <link rel="stylesheet" href="main_style.css">
+</head>
+<body>
+    <div class="overflowhidden">
+
+
+
+        <div class="introtexts">
+
+            <h1 class="introtext introtext-1">Aleks</h1>
+            <h1 class="introtextt introtext-2">editing</h1>
+            <h2 class="introtexttt introtext-3">only for THE BEST</h2>
+
+        </div>
+
+        <script src="gsap.min.js"></script>
+        <script src="ScrollTrigger.min.js"></script>
+
+        <script>
+
+            gsap.from(".introtext", 0.8, {
+                x: "-80",
+                ease: Power3.easeInOut,
+                opacity: "0",
+            }, 0.2);
+
+            gsap.to(".introtext", 0.8, {
+                x: "60",
+                ease: Power3.easeInOut,
+                opacity: "0",
+                delay: 2.8,
+            }, 0.2);
+
+            gsap.from(".introtextt", 0.8, {
+                x: "-40",
+                ease: Power3.easeInOut,
+                opacity: "0",
+                delay: 0.6,
+            }, 0.2);
+
+            gsap.to(".introtextt", 0.8, {
+                x: "60",
+                ease: Power3.easeInOut,
+                opacity: "0",
+                delay: 2.7,
+            }, 0.2);
+
+
+            gsap.from(".introtexttt", 0.8, {
+                y: "40",
+                ease: Power3.easeInOut,
+                opacity: "0",
+                delay: 1.4,
+            }, 0.2);
+
+            gsap.to(".introtexttt", 0.8, {
+                y: "60",
+                ease: Power3.easeInOut,
+                opacity: "0",
+                delay: 3.6,
+            }, 0.2);
+
+            gsap.to(".introtexts", 0.8,
+                {
+                    delay: 4,
+                    opacity: 0,
+                    ease: Power3.easeInOut,
+
+                }, 0.2)
+
+            gsap.to(".introtexts", 0,
+                {
+                    delay: 4.5,
+                    x: "-9999",
+
+                })
+        </script>
+
+
+
+
+
+        <div class="header">
+          <div class="header-L">
+            <div><img class="header_logo" src="assets\photos_png\logoV1_notext.png"></div>
+            <a class="menubutton" href="main_page_Ni.html">Home</a>
+            <a class="menubutton1" href="landing_page_Ni.html">My Work</a>
+          </div>
+          <div class="header-R">
+            <a class="contactB" href="landing_page_Ni.html">work with me</a>
+          </div>
+        </div>
+        <div class="Gline">
+        </div>
+        <div class="main">
+
+
+
+
+            <div class="logo">
+
+
+                <img class="premiere" src="assets\photos_png\icons\premiere.png">
+                <img class="after" src="assets\photos_png\icons\after_effects.png">
+                <img class="ilustrator" src="assets\photos_png\icons\ilustrator.png">
+
+                <img class="logo" src="assets\photos_png\logoV1.png">
+
+                <img class="blender" src="assets\photos_png\icons\blender.png">
+                <img class="photoshop" src="assets\photos_png\icons\photoshop.png">
+                <img class="animate" src="assets\photos_png\icons\animate.png">
+
+            </div>
+            <div class="lineW2"></div>
+
+
+
+            <div class="gallery">
+                <li><video controls class="vid2" src="work examples\Room_showcase.mp4"></video></li>
+                <li><video controls class="vid2" src="work examples\gaming_video.mp4"></video></li>
+                <li><video controls class="vid2" src="work examples\Presentation_video.mp4"></video></li>
+
+            </div>
+
+            <script>
+                gsap.registerPlugin(ScrollTrigger);
+
+                const videos = document.querySelectorAll('.vid2');
+                const gallery = document.querySelector('.gallery');
+                let currentIndex = 0;
+                let isMouseOverGallery = false; // Track if the mouse is over the gallery
+
+                // Update the videos' position and scale
+                function updateVideos(index) {
+                    videos.forEach((video, i) => {
+                        const isCenter = i === index;
+                        const isLeft = i === (index - 1 + videos.length) % videos.length;
+                        const isRight = i === (index + 1) % videos.length;
+
+                        gsap.to(video, {
+                            scale: isCenter ? 1.2 : 0.8, // Center video scales up
+                            opacity: isCenter ? 1 : 0.6, // Center video is fully visible
+                            x: isCenter ? '0%' : isLeft ? '-100%' : isRight ? '100%' : '200%',
+                            duration: 0.6,
+                            ease: 'power2.out',
+                            zIndex: isCenter ? 10 : 1, // Center video is on top
+                        });
+                    });
+                }
+
+                // Scroll handler
+                document.addEventListener('wheel', (event) => {
+                    if (isMouseOverGallery) {
+                        event.preventDefault(); // Prevent page scrolling when hovering over the gallery
+
+                        const delta = event.deltaY;
+
+                        if (delta > 0) {
+                            currentIndex = (currentIndex + 1) % videos.length; // Increment
+                        } else {
+                            currentIndex = (currentIndex - 1 + videos.length) % videos.length; // Decrement
+                        }
+
+                        updateVideos(currentIndex);
+                    }
+                }, { passive: false }); // Ensure passive is false to allow preventDefault()
+
+                // Mouse enter and leave handlers
+                gallery.addEventListener('mouseenter', () => {
+                    isMouseOverGallery = true; // Enable scrolling
+                });
+
+                gallery.addEventListener('mouseleave', () => {
+                    isMouseOverGallery = false; // Disable scrolling
+                });
+
+                // Initialize the first centered video
+                updateVideos(currentIndex);
+
+            </script>
+            <div class="MPTM">
+                <div class="MPT1">
+
+                    <h1 class="title2">WHO AM I?</h1>
+                    <h2 class="text2">
+                        HI I'm Aleks AKA your new video editor!
+                        It's nice to meet you.<br> <br> With over half a decade of experiance
+                        editing diffrent types of content for youtube and tiktok I made
+                        it my mission to take your content to the next level! And most importantly
+                        give you more time to focus on the things you actualy enjoy. Remember those days?
+                        When you just started filming becouse you loved it so much not having to worry
+                        about making videos on time or being under so much pressure. I'm here to bring
+                        those days right back!
+                    </h2>
+                </div>
+                <img class="presIMG" src="assets\photos_png\fullPRESIMG.svg">
+            </div>
+            <a class="contactB2" href="landing_page_Ni.html">work with me</a>
+        </div>
+
+
+        <div class="Gline"></div>
+
+
+        <div class="contact">
+            <li class="contactli">
+
+                <ul><a class="contact-text" href="#">mail: aleksvideoediting@gmail.com</a></ul>
+                <ul><a class="contact-text" href="#">phone: +386 31 253 643</a></ul>
+                <ul><a class="contact-text" href="#">youtube</a></ul>
+                <ul><a class="contact-text" href="#">twiter</a></ul>
+
+            </li>
+            <div class="img2">
+                <img class="premiere2" src="assets\photos_png\icons\premiere.png">
+                <img class="after2" src="assets\photos_png\icons\after_effects.png">
+                <img class="ilustrator2" src="assets\photos_png\icons\ilustrator.png">
+                <img class="blender2" src="assets\photos_png\icons\blender.png">
+                <img class="photoshop2" src="assets\photos_png\icons\photoshop.png">
+                <img class="animate2" src="assets\photos_png\icons\animate.png">
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
