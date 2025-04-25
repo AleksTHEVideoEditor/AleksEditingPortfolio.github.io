@@ -537,7 +537,7 @@ div.form-group{
 display: flex;
 align-items: stretch;
 width: 25vh;
-flex: 1;
+flex: 5;
 align-items: stretch;
 
 }
@@ -549,20 +549,8 @@ flex-direction: column;
 align-items: flex-start;
 padding-left: 1vh;
 width: 25vh;
-flex: 1;
+flex: 5;
 align-items: stretch;
-
-}
-
-input{
-
-width:auto;
-
-}
-
-input{
-
-flex: auto;
 
 }
 
