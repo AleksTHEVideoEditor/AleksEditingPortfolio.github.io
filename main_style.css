@@ -536,7 +536,9 @@ div.form-group{
 
 display: flex;
 align-items: stretch;
-width: 35vh;
+width: 25vh;
+flex: 1;
+align-items: stretch;
 
 }
 
