@@ -487,8 +487,7 @@ h1.TITLE2{
 
   display: flex;
   background-color: #353935;
-  width: auto;
-  height: auto;
+  width: 80vh;
   padding-bottom: 2vh;
   margin-left: 3vw;
   text-align: center;
