@@ -507,7 +507,7 @@ div.form-row {
 }
 
 textarea.form-control{
-max-width: 10vh;
+max-width: 30vh;
 flex:2;
 }
 
@@ -546,7 +546,8 @@ display: flex;
 flex-direction: column;
 align-items: flex-start;
 padding-left: 1vh;
-width: 35vh;
+width: 25vh;
+flex: 1;
 align-items: stretch;
 
 }
