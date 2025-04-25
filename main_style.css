@@ -507,7 +507,7 @@ div.form-row {
 }
 
 textarea.form-control{
-width: 20vh;
+max-width: 20vh;
 flex:2;
 }
 
