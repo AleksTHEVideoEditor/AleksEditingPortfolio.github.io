@@ -163,7 +163,6 @@ div.we1, div.we1R {
   border-radius: 1.8vw;
   outline: 0.5vh solid #FAED26;
   min-width: 650px;
-  color: #9D8D8F;
 
 }
 
@@ -194,9 +193,9 @@ h1.e1t {
   position: relative;
   color: white;
   cursor: default;
-  font-family: impact;
-  font-weight: 500;
-  font-size: 4vh;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 
 }
 
@@ -219,8 +218,11 @@ h1.e1t:hover::before{
 h4.e1te {
 
   position: relative;
-  color: white;
-  font-size: 1.5rem;
+  color: #9D8D8F;
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
   transition: all 0.8s ease-in;
 
 }
