@@ -18,7 +18,7 @@ div.overflowhidden{
 div.header {
     display: flex;
     justify-content: space-between;
-    background-color: #353935;
+    background-color: #5A5560;
     height: 7vh;
     width: 100vw;
 }
@@ -46,14 +46,14 @@ a.contactB {
   text-decoration: none;
   font-family: impact;
   font-weight: 100;
-  outline: 0.25vh solid white;
+  outline: 0.25vh solid #FAED26;
   display: block;
 }
 
 .contactB2{
 
   position: absolute;
-  background-color: #353935;
+  background-color: #FAED26;
   width: 12vh;
   height: 3.2vh;
   color: white;
@@ -63,7 +63,7 @@ a.contactB {
   right: 5vh;
   font-family: impact;
   font-weight: 100;
-  outline: 3px solid white;
+  outline: 3px solid #FAED26;
   margin-right: 40vw;
   margin-top: -20vh;
   text-align: center;
@@ -90,7 +90,7 @@ a.menubutton {
 
 a.menubutton1 {
 
-    color: white;
+    color: #FAED26;
     font-family: Arial;
     font-weight: bolder;
     font-size: 2.3vh;
@@ -120,7 +120,7 @@ div.Wline {
 }
 
 div.main {
-    background-color: #28282B;
+    background-color: #46344E;
     width: 100vw;
     height: auto;
     padding-bottom: 5vh;
@@ -158,10 +158,10 @@ div.we1, div.we1R {
   padding: 1vw;
   width: 70vw;
   height: auto;
-  background-color:#1B1212;
+  background-color:#9D8D8F;
   margin: 1vw;
   border-radius: 1.8vw;
-  outline: 0.1vw solid white;
+  outline: 0.1vw solid #FAED26;
   min-width: 650px;
 
 }
