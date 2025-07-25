@@ -162,7 +162,7 @@ div.we1, div.we1R {
   width: 70vw;
   height: auto;
   background-color:#5A5560;
-  margin: 1vw;
+  margin: 3vw;
   border-radius: 1.8vw;
   outline: 0.5vh solid #FAED26;
   min-width: 650px;
@@ -174,7 +174,8 @@ margin-left: 26vw;
 }
 
 video.vid1 {
-    height: 45vh;
+    max-height: 45vh;
+    height: auto;
     width: auto;
     min-width: 650px;
     border-radius: 25px;
